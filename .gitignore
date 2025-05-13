@@ -1,0 +1,46 @@
+# Bench Environment
+.env
+env/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+
+# Node and JS assets
+node_modules/
+rollup.*
+build/
+*.log
+
+# Frappe-specific folders
+sites/assets/
+sites/*/public/*
+sites/*/private/backups/
+sites/*/private/files/
+sites/*/logs/
+sites/common_site_config.json
+sites/*/site_config.json
+
+# SQLite DBs or local dev DBs (if any)
+*.sqlite3
+*.db
+
+# Redis, PostgreSQL dumps (optional)
+*.rdb
+*.dump
+*.sql
+*.tar.gz
+
+# MacOS or Linux metadata
+.DS_Store
+Thumbs.db
+
+# Yarn or npm lock files (optional, depending on team policy)
+yarn.lock
+package-lock.json
+
+# Python virtual environment
+venv/
+

@@ -1,0 +1,21 @@
+{
+    "frappe": {
+        "resolution": {
+            "commit_hash": null,
+            "branch": null
+        },
+        "required": [],
+        "idx": 1,
+        "version": "15.68.0"
+    },
+    "healthcare_system": {
+        "is_repo": true,
+        "resolution": {
+            "commit_hash": "47d4a8bfa394ab372e45a65fd7f357d12685d346",
+            "branch": "develop"
+        },
+        "required": [],
+        "idx": 2,
+        "version": "0.0.1"
+    }
+}
