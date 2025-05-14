@@ -44,3 +44,4 @@ package-lock.json
 # Python virtual environment
 venv/
 
+.qodo
