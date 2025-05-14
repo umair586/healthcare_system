@@ -154,13 +154,16 @@ fixtures = [
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
+doc_events = {
 # 	"*": {
 # 		"on_update": "method",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
-# }
+    "Patient": {
+        "after_insert": "healthcare_system.handlers.create_portal_user"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
