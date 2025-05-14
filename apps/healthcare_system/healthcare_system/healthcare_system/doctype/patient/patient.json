@@ -14,7 +14,8 @@
   "identification",
   "national_id",
   "insurance_provider",
-  "insurance_policy_number"
+  "insurance_policy_number",
+  "documents"
  ],
  "fields": [
   {
@@ -79,12 +80,18 @@
    "fieldname": "insurance_policy_number",
    "fieldtype": "Data",
    "label": "Insurance Policy Number"
+  },
+  {
+   "fieldname": "documents",
+   "fieldtype": "Table",
+   "label": "Documents",
+   "options": "Patient Document"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-14 07:58:12.101733",
+ "modified": "2025-05-14 10:28:37.669822",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Patient",
