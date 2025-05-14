@@ -5,6 +5,23 @@ app_description = "Healthcare Appointment Scheduling System"
 app_email = "umair.qau586@gmail.com"
 app_license = "mit"
 
+# Fixtures
+# ------------------
+fixtures = [
+    {
+        "dt": "Client Script",
+        "filters": [["module", "=", "Healthcare System"]]
+    },
+    {
+        "dt": "Custom Field",
+        "filters": [["module", "=", "Healthcare System"]]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [["module", "=", "Healthcare System"]]
+    }
+]
+
 # Apps
 # ------------------
 
