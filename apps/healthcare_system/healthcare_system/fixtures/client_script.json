@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Patient",
+  "enabled": 1,
+  "modified": "2025-05-14 09:24:00.405424",
+  "module": "Healthcare System",
+  "name": "Patient Form Validation Script",
+  "script": "frappe.ui.form.on('Patient', {\n\trefresh(frm) {\n\t\t// your code here\n\t},\n\t\n\tvalidate: function(frm) {\n        if (frm.doc.age <= 0) {\n            frappe.throw(__('Age must be greater than 0'));\n        }\n        if (!frm.doc.email || !frappe.utils.validate_type(frm.doc.email, 'email')) {\n            frappe.msgprint(__('Please enter a valid email address'));\n            frappe.validated = false;\n        }\n    }\n})",
+  "view": "Form"
+ }
+]
