@@ -19,6 +19,12 @@ fixtures = [
     {
         "dt": "Property Setter",
         "filters": [["module", "=", "Healthcare System"]]
+    },
+    {
+        "doctype": "Workflow",
+        "filters": {
+            "name": ["in", ["Doctor Leave Approval"]]
+        }
     }
 ]
 
