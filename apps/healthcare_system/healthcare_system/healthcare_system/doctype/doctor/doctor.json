@@ -15,6 +15,7 @@
   "professional",
   "specialization",
   "qualifications",
+  "department",
   "system",
   "status",
   "profile_picture"
@@ -82,12 +83,18 @@
    "fieldname": "profile_picture",
    "fieldtype": "Attach Image",
    "label": "Profile Picture"
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 06:26:38.719942",
+ "modified": "2025-05-15 11:14:51.166014",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Doctor",

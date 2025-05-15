@@ -25,6 +25,12 @@ fixtures = [
         "filters": {
             "name": ["in", ["Doctor Leave Approval"]]
         }
+    },
+    {
+        "doctype": "Report",
+        "filters": {
+            "name": ["in", ["Completed Appointments Report"]]
+        }
     }
 ]
 

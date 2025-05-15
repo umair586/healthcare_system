@@ -1,30 +1,34 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-05-14 11:35:05.193959",
+ "creation": "2025-05-15 11:10:49.722280",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "status"
+  "department_name",
+  "description"
  ],
  "fields": [
   {
-   "default": "Pending",
-   "fieldname": "status",
-   "fieldtype": "Select",
+   "fieldname": "department_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Status",
-   "options": "Pending\nCompleted",
+   "label": "Department Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 10:38:22.283607",
+ "modified": "2025-05-15 11:12:10.956403",
  "modified_by": "Administrator",
  "module": "Healthcare System",
- "name": "Appointment",
+ "name": "Department",
  "owner": "Administrator",
  "permissions": [
   {

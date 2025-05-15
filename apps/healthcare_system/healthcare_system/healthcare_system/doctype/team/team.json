@@ -1,30 +1,41 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-05-14 11:35:05.193959",
+ "creation": "2025-05-15 11:19:13.666734",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "status"
+  "team_name",
+  "description",
+  "members"
  ],
  "fields": [
   {
-   "default": "Pending",
-   "fieldname": "status",
-   "fieldtype": "Select",
+   "fieldname": "team_name",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Status",
-   "options": "Pending\nCompleted",
+   "label": "Team Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "members",
+   "fieldtype": "Table",
+   "label": "Members",
+   "options": "Team Member"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-15 10:38:22.283607",
+ "modified": "2025-05-15 11:29:55.952900",
  "modified_by": "Administrator",
  "module": "Healthcare System",
- "name": "Appointment",
+ "name": "Team",
  "owner": "Administrator",
  "permissions": [
   {
