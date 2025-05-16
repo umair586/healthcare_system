@@ -20,7 +20,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Pending\nConfirmed\nCompleted\nCancelled"
+   "options": "Pending\nConfirmed\nCompleted\nCancelled",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -63,7 +64,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-16 09:11:23.310372",
+ "modified": "2025-05-16 10:21:54.520514",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Appointment",

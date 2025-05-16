@@ -23,7 +23,7 @@ fixtures = [
     {
         "doctype": "Workflow",
         "filters": {
-            "name": ["in", ["Doctor Leave Approval"]]
+            "name": ["in", ["Doctor Leave Approval", "Appointment Status Flow"]]
         }
     },
     {
