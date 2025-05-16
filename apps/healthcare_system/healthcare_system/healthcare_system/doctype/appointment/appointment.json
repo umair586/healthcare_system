@@ -11,7 +11,11 @@
   "doctor",
   "date",
   "time",
-  "status"
+  "status",
+  "reschedule",
+  "reschedule_requested",
+  "cancellation_requested",
+  "reason"
  ],
  "fields": [
   {
@@ -58,13 +62,35 @@
    "fieldtype": "Time",
    "label": "Time",
    "reqd": 1
+  },
+  {
+   "fieldname": "reschedule",
+   "fieldtype": "Section Break",
+   "label": "Reschedule/Cancele"
+  },
+  {
+   "default": "0",
+   "fieldname": "reschedule_requested",
+   "fieldtype": "Check",
+   "label": "Reschedule Requested"
+  },
+  {
+   "default": "0",
+   "fieldname": "cancellation_requested",
+   "fieldtype": "Check",
+   "label": "Cancellation Requested"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-05-16 10:21:54.520514",
+ "modified": "2025-05-16 11:16:42.119048",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Appointment",

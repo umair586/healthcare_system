@@ -35,6 +35,12 @@ fixtures = [
     {
         "doctype": "Server Script",
         "filters": [["name", "in", ["Validate Doctor Availability"]]]
+    },
+    {
+        "doctype": "Notification",
+        "filters": [
+            ["name", "in", ["Appointment Rescheduling/Cancellation Notification"]]
+        ]
     }
 ]
 
