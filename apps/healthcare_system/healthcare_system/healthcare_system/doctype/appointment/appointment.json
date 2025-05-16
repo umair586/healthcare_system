@@ -1,10 +1,16 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "naming_series",
  "creation": "2025-05-14 11:35:05.193959",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "amended_from",
+  "patient",
+  "doctor",
+  "date",
+  "time",
   "status"
  ],
  "fields": [
@@ -14,17 +20,54 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Status",
-   "options": "Pending\nCompleted",
+   "options": "Pending\nConfirmed\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Appointment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "Doctor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time",
    "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-05-15 10:38:22.283607",
+ "modified": "2025-05-16 09:11:23.310372",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Appointment",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
