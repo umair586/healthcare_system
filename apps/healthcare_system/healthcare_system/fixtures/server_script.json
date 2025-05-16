@@ -1,0 +1,21 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-05-16 10:03:48.477365",
+  "module": "Healthcare System",
+  "name": "Validate Doctor Availability",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Appointment",
+  "script": "import frappe\nfrom frappe import _\n\ndef overlaps(a_start, a_end, b_start, b_end):\n    return a_start < b_end and b_start < a_end\n\ndef validate_doctor_schedule(doc, method):\n    # Validate against existing appointments\n    conflicting = frappe.db.sql(\"\"\"\n        SELECT name FROM `tabAppointment`\n        WHERE doctor=%s AND date=%s AND time=%s AND name != %s\n        AND status IN ('Pending', 'Confirmed')\n    \"\"\", (doc.doctor, doc.date, doc.time, doc.name))\n\n    if conflicting:\n        frappe.throw(_(\"Doctor already has an appointment at this time.\"))\n\n    # Check against Doctor Availability\n    weekday = frappe.utils.getdate(doc.date).strftime('%A')  # e.g., Monday\n    doctor_avail = frappe.db.sql(\"\"\"\n        SELECT day_of_week, from_time, to_time FROM `tabDoctor Availability`\n        WHERE parent=%s AND day_of_week=%s\n    \"\"\", (doc.doctor, weekday), as_dict=True)\n\n    if not doctor_avail:\n        frappe.throw(_(\"Doctor is not available on {0}.\").format(weekday))\n\n    is_within = False\n    for slot in doctor_avail:\n        if slot.from_time <= doc.time <= slot.to_time:\n            is_within = True\n            break\n\n    if not is_within:\n        frappe.throw(_(\"Doctor is not available at the selected time.\"))\n\nvalidate_doctor_schedule(doc, method)\n",
+  "script_type": "DocType Event"
+ }
+]

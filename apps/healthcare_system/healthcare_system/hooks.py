@@ -31,6 +31,10 @@ fixtures = [
         "filters": {
             "name": ["in", ["Completed Appointments Report"]]
         }
+    },
+    {
+        "doctype": "Server Script",
+        "filters": [["name", "in", ["Validate Doctor Availability"]]]
     }
 ]
 
