@@ -34,7 +34,7 @@ fixtures = [
     },
     {
         "doctype": "Server Script",
-        "filters": [["name", "in", ["Validate Doctor Availability"]]]
+        "filters": [["name", "in", ["Validate Doctor Availability", "Auto-Fill Appointment Slot from Waitlist on Cancellation"]]]
     },
     {
         "doctype": "Notification",
