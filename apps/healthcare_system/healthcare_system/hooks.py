@@ -190,13 +190,13 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
+scheduler_events = {
 # 	"all": [
 # 		"healthcare_system.tasks.all"
 # 	],
-# 	"daily": [
-# 		"healthcare_system.tasks.daily"
-# 	],
+	"daily": [
+		"healthcare_system.tasks.send_daily_appointment_reminders"
+	],
 # 	"hourly": [
 # 		"healthcare_system.tasks.hourly"
 # 	],
@@ -206,7 +206,7 @@ doc_events = {
 # 	"monthly": [
 # 		"healthcare_system.tasks.monthly"
 # 	],
-# }
+}
 
 # Testing
 # -------
