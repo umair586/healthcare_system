@@ -5,18 +5,78 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_be3j"
+  "record_type",
+  "notes",
+  "diagnosis",
+  "test_results",
+  "appointment",
+  "patient",
+  "prescriptions",
+  "lab_results",
+  "test_report"
  ],
  "fields": [
   {
-   "fieldname": "section_break_be3j",
-   "fieldtype": "Section Break"
+   "fieldname": "record_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Record Type",
+   "options": "Diagnosis\nLab Report\nNote",
+   "reqd": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "diagnosis",
+   "fieldtype": "Data",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "test_results",
+   "fieldtype": "Small Text",
+   "label": "Test Results"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Appointment",
+   "options": "Appointment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Patient",
+   "options": "Patient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "prescriptions",
+   "fieldtype": "Table",
+   "label": "Prescriptions",
+   "options": "Prescription Detail"
+  },
+  {
+   "fieldname": "lab_results",
+   "fieldtype": "Table",
+   "label": "Lab Results",
+   "options": "Lab Result Detail"
+  },
+  {
+   "fieldname": "test_report",
+   "fieldtype": "Attach",
+   "label": "Test Report"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-14 11:35:43.197269",
+ "modified": "2025-05-23 11:05:19.028344",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Medical Record",
@@ -38,5 +98,8 @@
  "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
 }

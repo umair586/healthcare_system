@@ -15,10 +15,7 @@
   "national_id",
   "insurance_provider",
   "insurance_policy_number",
-  "documents",
-  "history",
-  "past_appointments",
-  "medical_history"
+  "documents"
  ],
  "fields": [
   {
@@ -89,27 +86,12 @@
    "fieldtype": "Table",
    "label": "Documents",
    "options": "Patient Document"
-  },
-  {
-   "fieldname": "history",
-   "fieldtype": "Section Break",
-   "label": "History"
-  },
-  {
-   "fieldname": "past_appointments",
-   "fieldtype": "Data",
-   "label": "Past Appointments"
-  },
-  {
-   "fieldname": "medical_history",
-   "fieldtype": "Data",
-   "label": "Medical History"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-14 11:43:46.554698",
+ "modified": "2025-05-23 11:20:00.582441",
  "modified_by": "Administrator",
  "module": "Healthcare System",
  "name": "Patient",
